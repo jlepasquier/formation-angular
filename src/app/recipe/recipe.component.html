@@ -1,0 +1,14 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image">
+      <img mat-card-image [src]="recipe.picture" alt="Photo of a cocktail">
+    </div>
+    <mat-card-title>{{ recipe.name }}</mat-card-title>
+    <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="recipe.picture" alt="Photo of a cocktail">
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" routerLink="/recipes/{{ recipe.id }}" >Voir plus</button>
+  </mat-card-actions>
+</mat-card>

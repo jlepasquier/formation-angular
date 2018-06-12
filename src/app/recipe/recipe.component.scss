@@ -1,0 +1,23 @@
+.example-card {
+  max-width: 400px;
+  margin: 8px;
+}
+
+.example-header-image {
+  margin-left: 8px;
+  margin-top: 8px;
+  img {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+  }
+}
+
+.description {
+  height: 92px;
+}
+
+mat-card-actions {
+  padding-top:0;
+  text-align: center;
+}
