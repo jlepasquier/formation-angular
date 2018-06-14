@@ -1,0 +1,27 @@
+<div class="container">
+  <mat-card class="example-card ">
+    <mat-card-header>
+      <h1>Création d'une recette</h1>
+    </mat-card-header>
+
+    <mat-card-actions>
+      <div class="example-container">
+        <form [formGroup]="recipeForm">
+          <mat-form-field>
+            <input matInput formControlName="name" type="text" placeholder="Nom">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput formControlName="picture" type="url" placeholder="Adresse URL de la photo">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput formControlName="ingredientName" type="text" placeholder="Ingredients">
+          </mat-form-field>
+
+          <button mat-button (click)="create()">Envoyer</button>
+        </form>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

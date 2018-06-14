@@ -12,18 +12,25 @@ import { AppRoutingModule } from '..//app-routing.module';
 import { RecipesComponent } from '../recipe/recipes/recipes.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RouterModule } from '@angular/router';
+import { CreateComponent } from './create/create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SortCocktailsByNamePipe } from './sort-cocktails-by-name.pipe';
 
 @NgModule({
   declarations: [
     RecipeComponent,
     StrToArrayPipe,
     RecipesComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    CreateComponent,
+    SortCocktailsByNamePipe
   ],
   imports: [
     CommonModule,
     CustomMaterialModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class RecipeModule { }

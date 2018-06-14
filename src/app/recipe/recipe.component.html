@@ -9,6 +9,7 @@
   <img mat-card-image [src]="recipe.picture" alt="Photo of a cocktail">
 
   <mat-card-actions>
-    <button mat-raised-button color="primary" routerLink="/recipes/{{ recipe.id }}" >Voir plus</button>
+      <button mat-raised-button color="primary" routerLink="/recipes/{{ recipe.id }}" >Voir plus</button>
+      <button mat-raised-button color="primary" (click)="deleteRecipe()" >Supprimer</button>
   </mat-card-actions>
 </mat-card>

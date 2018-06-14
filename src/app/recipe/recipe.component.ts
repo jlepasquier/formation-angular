@@ -1,23 +1,28 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Recipe } from './recipe.model';
+import { RecipeService } from './recipe.service';
+
 
 @Component({
   selector: 'app-recipe',
   templateUrl: './recipe.component.html',
-  styleUrls: ['./recipe.component.scss']
+  styleUrls: ['./recipe.component.scss'],
 })
 export class RecipeComponent implements OnInit {
 
+  state = 'smaller';
   areIngredientsExpanded = false;
 
   @Input() recipe: Recipe;
-  constructor() {}
+  @Output() delete = new EventEmitter();
+
+  constructor(private recipeService: RecipeService) {}
 
   ngOnInit() {
   }
 
-  toggleIngredients() {
-    this.areIngredientsExpanded = !this.areIngredientsExpanded;
+  deleteRecipe() {
+    this.delete.emit(this.recipe.id);
+    this.recipeService.delete(this.recipe.id).subscribe();
   }
-
 }

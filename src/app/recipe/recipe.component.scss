@@ -1,6 +1,7 @@
 .example-card {
   max-width: 400px;
   margin: 8px;
+  background-color: #f0f0f0;
 }
 
 .example-header-image {
@@ -20,4 +21,8 @@
 mat-card-actions {
   padding-top:0;
   text-align: center;
+}
+
+button:hover {
+  color:#e6a203;
 }
